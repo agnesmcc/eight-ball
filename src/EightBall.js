@@ -27,8 +27,16 @@ const messages = [
 const EightBall = () => {
     const [msg, setMsg] = useState("Think of a Question");
     const [color, setColor] = useState("black");
+
+    const getNewMessage = () => {
+        const index = Math.floor(Math.random() * messages.length);
+        setMsg(messages[index].msg);
+        setColor(messages[index].color);
+    };
+
     return (
-        <div className="eight-ball" style={{ backgroundColor: color }}>
+        <div className="eight-ball" style={{ backgroundColor: color }}
+            onClick={getNewMessage}>
             <h1 className="eight-ball-text">{msg}</h1>
         </div>
     );
