@@ -34,11 +34,20 @@ const EightBall = () => {
         setColor(messages[index].color);
     };
 
+    const reset = () => {
+        setMsg("Think of a Question");
+        setColor("black");
+    };
+
     return (
+        <>
         <div className="eight-ball" style={{ backgroundColor: color }}
             onClick={getNewMessage}>
             <h1 className="eight-ball-text">{msg}</h1>
         </div>
+
+        <button onClick={reset}>Reset</button>
+        </>
     );
 };
 
