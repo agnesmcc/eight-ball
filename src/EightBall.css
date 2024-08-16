@@ -1,0 +1,14 @@
+.eight-ball {
+    background-color: black;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.eight-ball-text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    top: 45%;
+    position: relative;
+}
